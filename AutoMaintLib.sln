@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMaintLib", "AutoMaintLib\AutoMaintLib.csproj", "{BBE33385-6890-434C-B1BA-EA5B2F0282BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMaintLibUnitTests", "AutoMaintLibUnitTests\AutoMaintLibUnitTests.csproj", "{8B456F85-66BD-4D1E-9703-5E88181557F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE33385-6890-434C-B1BA-EA5B2F0282BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE33385-6890-434C-B1BA-EA5B2F0282BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE33385-6890-434C-B1BA-EA5B2F0282BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE33385-6890-434C-B1BA-EA5B2F0282BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B456F85-66BD-4D1E-9703-5E88181557F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B456F85-66BD-4D1E-9703-5E88181557F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B456F85-66BD-4D1E-9703-5E88181557F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B456F85-66BD-4D1E-9703-5E88181557F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

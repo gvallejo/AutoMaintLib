@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AutoMaintLib.Cars.Model.CarModel" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAABAAAgAAAAAAAAAAAAAEAAAAAAAkAAAIAAAA=</HashCode>
+      <FileName>Cars\Model\CarModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Cars.Model.Manufacturer" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAgAAAAAAAA=</HashCode>
+      <FileName>Cars\Model\Manufacturer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Cars.Model.Model" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Cars\Model\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Cars.Model.Trim" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cars\Model\Trim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Core.Car" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgBAAAAAgA=</HashCode>
+      <FileName>Core\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.ApplicableTasks.ElectricCarMaintenanceTasksFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Guides\ApplicableTasks\ElectricCarMaintenanceTasksFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.ApplicableTasks.FuelEngineMaintenanceTasksFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Guides\ApplicableTasks\FuelEngineMaintenanceTasksFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.CarTypeBasedMaintenanceGuideFactory" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Guides\CarTypeBasedMaintenanceGuideFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.DieselMaintenanceGuide" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACAAA=</HashCode>
+      <FileName>Maintenance\Guides\DieselMaintenanceGuide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.ElectricMaintenanceGuide" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACAAA=</HashCode>
+      <FileName>Maintenance\Guides\ElectricMaintenanceGuide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.GasMaintenanceGuide" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACAAA=</HashCode>
+      <FileName>Maintenance\Guides\GasMaintenanceGuide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.MaintenanceGuide" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAACAAA=</HashCode>
+      <FileName>Maintenance\Guides\MaintenanceGuide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Guides.MaintenanceGuideFactory" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Guides\MaintenanceGuideFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Tasks.MaintenanceTask" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACACAAgAAIAIcAAAAAAAAAAAAQAAAAgAAAAAACAA=</HashCode>
+      <FileName>Maintenance\Tasks\MaintenanceTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Tasks.MaintenanceTaskCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGIAAEAAAACAABAQCAAQFQQABgAAAABACAAAAABQIAA=</HashCode>
+      <FileName>Maintenance\Tasks\MaintenanceTaskCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Tasks.Validators.CarTypeBasedTaskValidator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAQAAAAgAAAgAEAABAAAAEAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Tasks\Validators\CarTypeBasedTaskValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AutoMaintLib.Maintenance.Tracking.MaintenanceLogEntry" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAEAAAAAAEAA=</HashCode>
+      <FileName>Maintenance\Tracking\MaintenanceLogEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AutoMaintLib.Maintenance.Guides.ApplicableTasks.IApplicableMaintenanceTasksFactory" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Guides\ApplicableTasks\IApplicableMaintenanceTasksFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AutoMaintLib.Maintenance.Tasks.Validators.IMaintenanceTaskValidator" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maintenance\Tasks\Validators\IMaintenanceTaskValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AutoMaintLib.Cars.Types.CarTypeEnum" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEQAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cars\Types\CarTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AutoMaintLib.Maintenance.Tasks.TaskEnum" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAACAAAAAAAAAAAAIAAIAAAAAAAAAAAQA=</HashCode>
+      <FileName>Maintenance\Tasks\TaskEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="AutoMaintLib.Cars.Model.OnCarTypeChangedEventHandler" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cars\Model\CarModel.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
