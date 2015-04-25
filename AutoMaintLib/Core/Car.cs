@@ -15,10 +15,7 @@ namespace AutoMaintLib.Core
         private CarModel m_CarModel;      
         private decimal m_Odometer;
 
-        //public Car()
-        //{
-
-        //}
+        
         public Car(ref CarModel carModel, string vinNumber)
         {
             this.m_CarModel = carModel;

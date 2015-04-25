@@ -1,4 +1,5 @@
-﻿using AutoMaintLib.Cars.Types;
+﻿using AutoMaintLib.Cars.Model;
+using AutoMaintLib.Cars.Types;
 using AutoMaintLib.Maintenance.Guides.ApplicableTasks;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,13 @@ namespace AutoMaintLib.Maintenance.Guides
     public class CarTypeBasedMaintenanceGuideFactory : MaintenanceGuideFactory
     {
 
-
-        protected override MaintenanceGuide CreateMaintenanceGuide(CarTypeEnum carType)
+       
+        protected override MaintenanceGuide CreateMaintenanceGuide(CarModel carModel)
         {
             MaintenanceGuide maintenanceGuide = null;
-            IApplicableMaintenanceTasksFactory applicableMaintenanceTasksFactory = null;
+            IApplicableMaintenanceTasksFactory applicableMaintenanceTasksFactory = null;            
 
-            switch (carType)
+            switch (carModel.CarType)
             {
                 case CarTypeEnum.Gasoline:
                     applicableMaintenanceTasksFactory = new FuelEngineMaintenanceTasksFactory();

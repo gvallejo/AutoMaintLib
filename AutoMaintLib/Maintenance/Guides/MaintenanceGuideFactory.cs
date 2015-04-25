@@ -1,4 +1,5 @@
-﻿using AutoMaintLib.Cars.Types;
+﻿using AutoMaintLib.Cars.Model;
+using AutoMaintLib.Cars.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,15 @@ namespace AutoMaintLib.Maintenance.Guides
 {
     public abstract class MaintenanceGuideFactory
     {
-        public MaintenanceGuide GetMaintenanceGuide(CarTypeEnum carType)
+        public MaintenanceGuide GetMaintenanceGuide(CarModel carModel)
         {
-            MaintenanceGuide maintenanceGuide = CreateMaintenanceGuide(carType);
+            MaintenanceGuide maintenanceGuide = CreateMaintenanceGuide(carModel);
             maintenanceGuide.AddApplicableTasks();
 
             return maintenanceGuide;
         }
 
-        protected abstract MaintenanceGuide CreateMaintenanceGuide(CarTypeEnum carType);
+        protected abstract MaintenanceGuide CreateMaintenanceGuide(CarModel carModel);
        
     }
 }

@@ -1,4 +1,5 @@
-﻿using AutoMaintLib.Cars.Types;
+﻿using AutoMaintLib.Cars.Model;
+using AutoMaintLib.Cars.Types;
 using AutoMaintLib.Maintenance.Guides;
 using System;
 using System.Collections.Generic;
@@ -11,24 +12,25 @@ namespace AutoMaintLib.Maintenance.Tasks.Validators
     public class CarTypeBasedTaskValidator: IMaintenanceTaskValidator
     {
         private MaintenanceGuide m_MaintenanceGuide = null;
-        private MaintenanceTask m_TaskToValidate = null;
-        private CarTypeEnum m_CarType;
-        private CarTypeBasedMaintenanceGuideFactory m_MaintenanceGuideFactory = null;
+        private MaintenanceTask m_TaskToValidate = null;               
+        private MaintenanceGuideFactory m_MaintenanceGuideFactory = null;
 
-        public CarTypeBasedTaskValidator(CarTypeEnum carType)
+        public CarTypeBasedTaskValidator(CarModel carModel)
         {
-            this.m_MaintenanceGuideFactory = new CarTypeBasedMaintenanceGuideFactory();
-            this.CarType = carType;                                
+            this.m_MaintenanceGuideFactory = new CarTypeBasedMaintenanceGuideFactory();            
+            SetMaintenanceGuide(carModel);
+            carModel.OnCarTypeChanged += carModel_OnCarTypeChanged;                                           
         }
 
-        public CarTypeEnum CarType
+        void carModel_OnCarTypeChanged(object sender, CarTypeEnum newCarType)
         {
-            get { return this.m_CarType; }
-            set 
-            { 
-                this.m_CarType = value;
-                this.m_MaintenanceGuide = this.m_MaintenanceGuideFactory.GetMaintenanceGuide(value);
-            }
+            CarModel carModel = (CarModel)sender;
+            SetMaintenanceGuide(carModel);
+        }
+
+        private void SetMaintenanceGuide(CarModel carModel)
+        {
+            this.m_MaintenanceGuide = this.m_MaintenanceGuideFactory.GetMaintenanceGuide(carModel);
         }
 
         public MaintenanceTask TaskToValidate
