@@ -1,4 +1,4 @@
-﻿using AutoMaintLib.Maintenance.Guides;
+﻿using AutoMaintLib.Core.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace AutoMaintLib.Maintenance.Tasks.Validators
 {
-    public interface IMaintenanceTaskValidator
+    public interface IMaintenanceTaskValidator: IValidator<MaintenanceTask>
     {
-        MaintenanceTask TaskToValidate { get; set; }
-
-        void Validate();        
+           
     }
 }

@@ -101,6 +101,8 @@ namespace AutoMaintLibUnitTests.Maintenance
             this.m_MaintenanceLogEntry.MaintenanceTasks.Add(new MaintenanceTask(TaskEnum.WheelAlignment));
             try
             {
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].BeginEdit();
+                
                 this.m_MaintenanceLogEntry.MaintenanceTasks[2].ActualHours = 10;
                 this.m_MaintenanceLogEntry.MaintenanceTasks[2].TimeStamp = DateTime.Now;
                 this.m_MaintenanceLogEntry.MaintenanceTasks[2].TaskType = TaskEnum.EVBatteryChange;
@@ -110,11 +112,52 @@ namespace AutoMaintLibUnitTests.Maintenance
             }
             catch (Exception e)
             {
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].CancelEdit();
                 StringAssert.Contains(e.Message, AutoMaintLib.Cars.Types.CarTypeEnum.Diesel.ToString());
                 return;
             }
+            finally
+            {
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].EndEdit();
+            }
 
             Assert.Fail("No exception thrown");
+        }
+
+        [TestMethod]
+        public void Edit_When_MaintTask_NotApplicableTo_CarType_ShouldRollbackChanges()
+        {
+            MaintenanceTask expected = null;
+
+            this.m_Vehicle.Model.CarType = AutoMaintLib.Cars.Types.CarTypeEnum.Diesel;
+
+            this.m_MaintenanceLogEntry.MaintenanceTasks.Add(new MaintenanceTask(TaskEnum.FuelLinesInspection));
+            this.m_MaintenanceLogEntry.MaintenanceTasks.Add(new MaintenanceTask(TaskEnum.OilChange));
+            this.m_MaintenanceLogEntry.MaintenanceTasks.Add(new MaintenanceTask(TaskEnum.TireRotation));
+            this.m_MaintenanceLogEntry.MaintenanceTasks.Add(new MaintenanceTask(TaskEnum.WheelAlignment));
+            try
+            {
+                expected = (MaintenanceTask)this.m_MaintenanceLogEntry.MaintenanceTasks[2].Clone();
+
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].BeginEdit();
+
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].ActualHours = 10;
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].TimeStamp = DateTime.Now;
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].TaskType = TaskEnum.EVBatteryChange;
+
+                this.m_MaintenanceLogEntry.MaintenanceTasks.Validate();
+
+            }
+            catch (Exception e)
+            {
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].CancelEdit();                               
+            }
+            finally
+            {
+                this.m_MaintenanceLogEntry.MaintenanceTasks[2].EndEdit();
+            }
+
+            Assert.AreEqual<TaskEnum>(expected.TaskType, this.m_MaintenanceLogEntry.MaintenanceTasks[2].TaskType);        
         }
 
 

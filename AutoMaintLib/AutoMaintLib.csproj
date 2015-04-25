@@ -45,6 +45,7 @@
     <Compile Include="Core\Car.cs" />
     <Compile Include="Cars\Model\Manufacturer.cs" />
     <Compile Include="Cars\Model\Model.cs" />
+    <Compile Include="Core\Validations\IValidatable.cs" />
     <Compile Include="Maintenance\Guides\CarTypeBasedMaintenanceGuideFactory.cs" />
     <Compile Include="Maintenance\Guides\DieselMaintenanceGuide.cs" />
     <Compile Include="Maintenance\Guides\ApplicableTasks\ElectricCarMaintenanceTasksFactory.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Maintenance\Guides\MaintenanceGuide.cs" />
     <Compile Include="Maintenance\Tasks\MaintenanceTaskCollection.cs" />
     <Compile Include="Maintenance\Tasks\TaskEnum.cs" />
+    <Compile Include="Core\Validations\IValidator.cs" />
     <Compile Include="Maintenance\Tracking\MaintenanceLogEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

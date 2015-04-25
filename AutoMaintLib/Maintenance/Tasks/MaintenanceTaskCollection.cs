@@ -62,8 +62,8 @@ namespace AutoMaintLib.Maintenance.Tasks
 
         public void Add(MaintenanceTask item)
         {
-            ValidateMaintenanceTask(item);
-            this.m_list.Add(item);
+            ValidateMaintenanceTask(item);                                
+           this.m_list.Add(item);           
         }
 
         public void Sort()
@@ -140,11 +140,10 @@ namespace AutoMaintLib.Maintenance.Tasks
 
         private void ValidateMaintenanceTask(MaintenanceTask item)
         {
-            if (this.m_MaintenanceTaskValidator != null)
-            {
-                this.m_MaintenanceTaskValidator.TaskToValidate = item;
-                this.m_MaintenanceTaskValidator.Validate();
-            }
+            IEnumerable<string> errors = null;
+
+            if (!item.IsValid(this.m_MaintenanceTaskValidator, out errors))
+                throw new InvalidOperationException(errors.ElementAt<string>(0));
         }
     }
 }
